@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
-require('./database/db');
+require('./src/database/db');
 app.use(express.json());
-app.use(require('./router/contactRouter'))
+app.use(require('./src/router/contactRouter'))
 
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () =>
 {
